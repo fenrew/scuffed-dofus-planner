@@ -17,6 +17,14 @@ const Navigation = props => {
                             </Link>
                         </span>
                     )}
+                    {props.user && (
+                        <span>
+                            &nbsp; &nbsp; &nbsp;
+                            <Link className="link nav-link" to="/equipment-list">
+                                Equipment
+                            </Link>
+                        </span>
+                    )}
                 </div>
                 <div>
                     {props.user ? (

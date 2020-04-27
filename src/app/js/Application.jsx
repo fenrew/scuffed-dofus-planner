@@ -7,6 +7,7 @@ import Auth from './Auth'
 import Home from './Home'
 import Navigation from './Navigation'
 import Profile from './Profile'
+import Equipment from './Equipment'
 import NotFound from './NotFound'
 import api from './utils/api'
 
@@ -34,6 +35,7 @@ class Application extends React.Component {
                     <Switch>
                         <Route exact path="/" render={() => <Home user={this.state.user} />} />
                         <Route exact path="/profile" render={() => <Profile user={this.state.user} />} />
+                        <Route exact path="/equipment-list" render={() => <Equipment user={this.state.user} />} />
                         <Route
                             path="/auth"
                             render={() => <Auth setUser={this._setUser} resetUser={this._resetUser} />}

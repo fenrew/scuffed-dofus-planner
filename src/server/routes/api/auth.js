@@ -9,7 +9,6 @@ router.post('/sign-up', (req, res) => {
     const { email, password } = req.body
 
     if (!email || !password) res.status(400).send({ error: 'Missing Credentials.' })
-
     User.findOne({ email })
         .then(existingUser => {
             if (existingUser) return res.status(400).send({ error: 'E-Mail exists already.' })
